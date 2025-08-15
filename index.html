@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jsvite_demo</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <h1>ログイン</h1>
+      <form id="login-form">
+        <input type="text" id="username" placeholder="ユーザー名" required />
+        <input
+          type="password"
+          id="password"
+          placeholder="パスワード"
+          required
+        />
+        <button type="submit">ログイン</button>
+      </form>
+      <div id="message"></div>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
