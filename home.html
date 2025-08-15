@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Site - Home</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>ようこそ！認証成功です 🎉</h1>
+      <p>ここがメインコンテンツページです</p>
+
+      <!-- 将来的にここに -->
+      <!-- - Hero UIコンポーネント -->
+      <!-- - カルーセル -->
+      <!-- - ポートフォリオ内容 -->
+
+      <button onclick="logout()">ログアウト</button>
+    </div>
+
+    <script>
+      function logout() {
+        sessionStorage.removeItem("authenticated");
+        window.location.href = "/";
+      }
+    </script>
+  </body>
+</html>

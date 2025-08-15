@@ -21,14 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
       
       if (result.success) {
         messageDiv.innerHTML = `<p style="color: green;">${result.message}</p>`;
-        // 認証成功時の処理をここに追加
         sessionStorage.setItem('authenticated', 'true');
-        location.reload(); // ページリロードまたは別ページに遷移
+        
+        // 1秒後にhome.htmlに遷移
+        setTimeout(() => {
+          window.location.href = '/home.html';
+        }, 1000);
+        
       } else {
         messageDiv.innerHTML = `<p style="color: red;">${result.message}</p>`;
       }
     } catch (error) {
       messageDiv.innerHTML = `<p style="color: red;">エラーが発生しました</p>`;
+      console.error('認証エラー:', error);
     }
   });
 });
