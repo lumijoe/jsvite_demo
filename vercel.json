@@ -1,0 +1,18 @@
+{
+  "routes": [
+    {
+      "src": "/home.html",
+      "dest": "/home.html"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/home",
+      "destination": "/home.html"
+    }
+  ]
+}
